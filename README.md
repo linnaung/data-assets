@@ -1,1 +1,1 @@
-Test knowledge graph assets for git storage
+Test knowledge graph assets for git storage.
