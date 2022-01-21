@@ -72317,7 +72317,6 @@ zbwext:wdIdentifier a owl:InverseFunctionalProperty;
 
 <http://zbw.eu/stw/thsys/b> a skos:Concept, zbwext:Thsys;
   rdfs:label "Betriebswirtschaft"@de, "Business economics"@en;
-  skos:definition "test";
   skos:inScheme :stw;
   skos:narrower <http://zbw.eu/stw/thsys/70005>, <http://zbw.eu/stw/thsys/70028>, <http://zbw.eu/stw/thsys/70030>,
     <http://zbw.eu/stw/thsys/70037>, <http://zbw.eu/stw/thsys/70041>, <http://zbw.eu/stw/thsys/70046>,
