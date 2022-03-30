@@ -1,0 +1,405 @@
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix nobel: <http://data.nobelprize.org/terms/> .
+@prefix nobel-ext: <http://data.nobelprize.org/terms-ext/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+<http://data.nobelprize.org/terms/> a owl:Ontology;
+  dcterms:description """This ontology specifies the classes and properties to describe the nobel prize dataset.
+  The nobel prize linked data dataset contains the authoritative information about Nobel prizes and Nobel Laureates since 1901.
+  Please refer to https://www.nobelprize.org/about/linked-data-documentation/ for details.
+  """@en;
+  rdfs:comment """
+  The original ontology was retrieved from http://data.nobelprize.org/terms/ in RDF/XML (Nov 2020).
+  The ontology was converted into turtle and the following changes have been made by metaphacts:
+  <li>
+   <ul>Fix typo: nobel:Litterature -> nobel:Literature (correct in data, c.f. http://data.nobelprize.org/page/category/Literature)</ul>
+   <ul>Added dedicated imports (FOAF, SKOS), define http://data.nobelprize.org/terms-ext/ as dedicated element namespace</ul>
+   <ul>Added SHACL shapes and minor extensions (using http://data.nobelprize.org/terms-ext/ as element namespace)</ul>
+  </li>
+  The license is CC-BY 4.0 according to https://data.nobelprize.org/specification/ (January 2021).
+  """@en;
+  dcterms:title "Linked Nobelprize Ontology"@en;
+  rdfs:seeAlso <http://www.nobelprize.org/>;
+  owl:versionInfo "version 0.1" ;
+  dcterms:creator "nobelprize.org";
+  dcterms:contributor "Johannes Trame <jt@metaphacts.com>", "Jeen Broekstra <jb@metaphacts.com>";
+  dcterms:created "2013-02-12T23:00:00.000Z"^^xsd:dateTime;
+  owl:imports <http://www.w3.org/2004/02/skos/core>, <http://xmlns.com/foaf/0.1/>;
+  <http://www.linkedmodel.org/1.2/schema/vaem#namespace> <http://data.nobelprize.org/terms-ext/>.
+
+nobel:AwardFile a owl:Class;
+  rdfs:comment "Some form of media related to the award given to a specific Laureate.";
+  rdfs:label "Award File";
+  rdfs:subClassOf foaf:Document .
+
+nobel:Category a owl:Class;
+  rdfs:comment "The Nobel Prize is given in six different categories.";
+  rdfs:label "Nobel Prize category";
+  rdfs:subClassOf skos:Concept;
+  owl:oneOf (nobel:Chemistry nobel:Physics nobel:Literature nobel:Peace nobel:Economic_Sciences
+      nobel:Physiology_or_Medicin) .
+
+nobel:Chemistry a owl:Thing;
+  rdfs:label "Chemistry" .
+
+nobel:Economic_Sciences a owl:Thing;
+  rdfs:label "Economic sciences" .
+
+nobel:FileType a owl:Class;
+  rdfs:comment "A file type indicates the nature of a prizeFile, for instance Acceptance Speach, Documentary, Press Release etc.";
+  rdfs:label "File Type";
+  rdfs:subClassOf skos:Concept .
+
+nobel:Laureate a owl:Class;
+  rdfs:comment "A laureate is a person or organization who recieves one or several Nobel Prizes.";
+  rdfs:label "Laureate";
+  rdfs:subClassOf foaf:Agent .
+
+nobel:LaureateAward a owl:Class;
+  rdfs:comment "The Nobel Prize is often divided to several laureates. LaureateAward captures the details of the award given to each laureate, such as share of the Nobel Prize, motivation etc.";
+  rdfs:label "Laureate Award";
+  rdfs:subClassOf dbpedia:Award .
+
+nobel:Literature a owl:Thing;
+  rdfs:label "Literature" .
+
+nobel:NobelPrize a owl:Class;
+  rdfs:comment "The Nobel Prize is a set of annual international awards bestowed in a number of categories by Scandinavian committees in recognition of cultural and scientific advances. The will of the Swedish chemist Alfred Nobel, the inventor of dynamite, established the prizes in 1895. The prizes in Physics, Chemistry, Physiology or Medicine, Literature, and Peace were first awarded in 1901. The Peace Prize is awarded in Oslo, Norway, while the other prizes are awarded in Stockholm, Sweden.";
+  rdfs:label "Nobel Prize";
+  rdfs:seeAlso <http://dbpedia.org/resource/Nobel_Prize>;
+  rdfs:subClassOf dbpedia:Award .
+
+nobel:Peace a owl:Thing;
+  rdfs:label "Peace" .
+
+nobel:Physics a owl:Thing;
+  rdfs:label "Physics" .
+
+nobel:Physiology_or_Medicin a owl:Thing;
+  rdfs:label "Physiology or Medicin" .
+
+nobel:PrizeFile a owl:Class;
+  rdfs:comment "Some form of media related to the Nobel Prize.";
+  rdfs:label "Prize File";
+  rdfs:subClassOf foaf:Document .
+
+nobel:awardFile a owl:ObjectProperty;
+  rdfs:comment "Points to an AwardFile, that is some form of media related to the award for this laureate.";
+  rdfs:domain nobel:LaureateAward;
+  rdfs:label "awardFile";
+  rdfs:range nobel:AwardFile .
+
+nobel:category a owl:ObjectProperty;
+  rdfs:comment "The category this Nobel Prize belongs to.";
+  rdfs:domain nobel:NobelPrize;
+  rdfs:label "category";
+  rdfs:range nobel:Category .
+
+nobel:contribution a owl:DatatypeProperty;
+  rdfs:comment "The contribution for which the laureate was given the Nobel Prize.";
+  rdfs:domain nobel:LaureateAward;
+  rdfs:label "contribution";
+  rdfs:range rdf:PlainLiteral .
+
+nobel:field a owl:DatatypeProperty;
+  rdfs:comment "The field within the category the Nobel Prize was awarded for.";
+  rdfs:domain dbpedia:LaureateAward;
+  rdfs:label "field";
+  rdfs:range rdf:PlainLiteral .
+
+nobel:fileType a owl:ObjectProperty;
+  rdfs:comment "Points to an FileType, that is, what kind of prizeFile this is, for instance Acceptance Speach, Documentary, Press Release etc.";
+  rdfs:domain nobel:PrizeFile;
+  rdfs:label "fileType";
+  rdfs:range nobel:FileType .
+
+nobel:laureate a owl:ObjectProperty;
+  rdfs:comment "Which laureates that recieve an award.";
+  rdfs:domain nobel:LaureateAward;
+  rdfs:label "laureate";
+  rdfs:range nobel:Laureate .
+
+nobel:laureateAward a owl:ObjectProperty;
+  rdfs:comment "Connects each laureate with the part of the Nobel Prize, that is the LaureateAward, he or she recieved.";
+  rdfs:domain nobel:Laureate;
+  rdfs:label "laureateAward";
+  rdfs:range nobel:LaureateAward;
+  rdfs:subPropertyOf dbpedia:Award .
+
+nobel:motivation a owl:DatatypeProperty;
+  rdfs:comment "The motivation for why the laureate was given the Nobel Prize.";
+  rdfs:domain nobel:LaureateAward;
+  rdfs:label "motivation";
+  rdfs:range rdf:PlainLiteral .
+
+nobel:nobelPrize a owl:ObjectProperty;
+  rdfs:comment "Points to the Nobel Prize recieved by a Laureate.";
+  rdfs:domain nobel:Laureate;
+  rdfs:label "nobelPrize";
+  rdfs:range nobel:NobelPrize;
+  rdfs:subPropertyOf dbpedia:Award .
+
+nobel:prizeFile a owl:ObjectProperty;
+  rdfs:comment "Points to an PrizeFile, that is some form of media related to the Nobel Prize.";
+  rdfs:domain nobel:NobelPrize;
+  rdfs:label "prizeFile";
+  rdfs:range nobel:PrizeFile .
+
+nobel:share a owl:DatatypeProperty;
+  rdfs:comment "The share of a Nobel Prize given to a Laureate, may be 1, 2 or 4 corresponding to the whole prize, half the prize and a quarter of the prize.";
+  rdfs:domain dbpedia:LaureateAward;
+  rdfs:label "share";
+  rdfs:range xsd:Integer .
+
+nobel:university a owl:ObjectProperty;
+  rdfs:comment "Points to the universities the Laureate was affiliated with during the period he did his contribution that laid the ground for the award.";
+  rdfs:domain nobel:LaureateAward;
+  rdfs:label "university";
+  rdfs:range dbpedia:University .
+
+nobel:year a owl:DatatypeProperty;
+  rdfs:comment "The year a given Nobel Prize was given.";
+  rdfs:domain dbpedia:Award;
+  rdfs:label "year";
+  rdfs:range xsd:Integer .
+
+<http://www.nobelprize.org/> rdfs:label "Nobelprize.org" .
+
+
+### SHAPES ###
+
+# some node shapes in inline/blank node property shapes to verify that we can process them
+nobel-ext:PrizeFileShape a sh:NodeShape ;
+    sh:targetClass nobel:PrizeFile ;
+    sh:property  [
+        sh:class nobel:FileType;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ; 
+        sh:path nobel:fileType
+    ];
+    sh:property  [
+        sh:datatype xsd:integer;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ; 
+        sh:path nobel:year
+    ]
+    .
+
+nobel-ext:AwardFileShape a sh:NodeShape ;
+    sh:targetClass nobel:AwardFile ;
+    sh:property  [
+        sh:class nobel:FileType;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ; 
+        sh:path nobel:fileType
+    ];
+    sh:property  [
+        sh:datatype xsd:integer;
+        sh:minCount 1 ; 
+        sh:maxCount 1 ; 
+        sh:path nobel:year
+    ]
+    .
+
+### node shapes with explicit IRIs for the node shapes as well as the property shapes ###
+
+#####
+# Shapes for class
+# nobel:LaureateAward 
+####
+nobel-ext:DBpediaLaureateAwardShape a sh:NodeShape ;
+    sh:targetClass dbpedia:Award ;
+    sh:property nobel-ext:FieldPropertyShape.
+
+nobel-ext:FieldPropertyShape a sh:PropertyShape;
+    sh:path nobel:field;
+    sh:datatype xsd:string.
+
+#####
+# Shapes for class
+# nobel:LaureateAward 
+####
+nobel-ext:LaureateAwardShape a sh:NodeShape ;
+    sh:targetClass nobel:LaureateAward ;
+    sh:property   nobel-ext:LaureateAwardShape-motivation,
+                  nobel-ext:LaureateAwardShape-contribution,
+                  nobel-ext:LaureateAwardShape-share,
+                  nobel-ext:LaureateAwardShape-year,
+                  nobel-ext:LaureateAwardShape-category,
+                  nobel-ext:LaureateAwardShape-isPartOf,
+                  nobel-ext:LaureateAwardShape-laureate,
+                  nobel-ext:LaureateAwardShape-university,
+                  nobel-ext:LaureateAwardShape-awardFile.
+
+nobel-ext:LaureateAwardShape-motivation a sh:PropertyShape;
+    sh:path nobel:motivation;
+    sh:uniqueLang true ; # currently not supported in the visualization and editing UI
+    sh:datatype xsd:string.
+
+nobel-ext:LaureateAwardShape-contribution a sh:PropertyShape;
+    sh:path nobel:contribution;
+    sh:datatype xsd:string; 
+    sh:maxCount 1.
+
+nobel-ext:LaureateAwardShape-share a sh:PropertyShape;
+    sh:path nobel:share;
+    sh:datatype xsd:integer; # in the data it is string, but the range is xsd:Integer... leaving this as failing case
+    sh:minCount 1;
+    sh:maxCount 1.
+
+nobel-ext:LaureateAwardShape-year a sh:PropertyShape;
+    sh:path nobel:year;
+    sh:datatype  xsd:integer; 
+    sh:minCount 1;
+    sh:maxCount 1.
+
+nobel-ext:LaureateAwardShape-category a sh:PropertyShape;
+    sh:path nobel:category;
+    sh:class nobel:Category;
+    sh:minCount 1;
+    sh:maxCount 1.
+
+nobel-ext:LaureateAwardShape-isPartOf a sh:PropertyShape;
+    sh:path <http://purl.org/dc/terms/isPartOf>;
+    sh:class nobel:NobelPrize;
+    sh:minCount 1;
+    sh:maxCount 1.
+
+nobel-ext:LaureateAwardShape-laureate a sh:PropertyShape;
+    sh:path nobel:laureate;
+    sh:class nobel:Laureate;
+    sh:minCount 1;
+    sh:maxCount 1.
+   
+# a laureate can be affiliate to 0,n universities during the period he did his contribution 
+# that laid the ground for the award, but the university should be an external, DBPedia instance.
+nobel-ext:LaureateAwardShape-university a sh:PropertyShape;
+    sh:path nobel:university;
+    sh:class dbpedia:University. 
+
+
+nobel-ext:LaureateAwardShape-awardFile a sh:PropertyShape;     
+      sh:path nobel:prizeFile;
+      sh:class nobel:AwardFile;
+      sh:minCount 1 .
+
+#####
+# Shapes for class
+# nobel:NobelPrize
+####
+nobel-ext:NobelPrizeShape a sh:NodeShape;
+    sh:targetClass nobel:NobelPrize ;
+    sh:property nobel-ext:NobelPrizeShape-category,
+                nobel-ext:NobelPrizeShape-prizefile .
+   
+nobel-ext:NobelPrizeShape-category a sh:PropertyShape; 
+      sh:message "every prize should have exactly one category";
+      sh:path nobel:category ;
+      sh:class nobel:Category ;
+      sh:minCount 1;
+      sh:maxCount 1.
+
+nobel-ext:NobelPrizeShape-prizefile a sh:PropertyShape;     
+      sh:path nobel:prizeFile;
+      sh:class nobel:PrizeFile;
+      sh:minCount 1 .
+
+#####
+# Shapes for class
+# nobel:Laureate
+####
+nobel-ext:LaureateShape a sh:NodeShape;
+    sh:targetClass nobel:Laureate ;
+    sh:property   nobel-ext:LaureateShape-nobelPrize,
+                  nobel-ext:LaureateShape-name  .
+
+nobel-ext:LaureateShape-nobelPrize a sh:PropertyShape; 
+      sh:message "every laureate should have at least one prize"; #this is to test that the SHACL engine privilege the custom sh:message instead of auto-generate
+      sh:path nobel:nobelPrize ;
+      sh:class nobel:NobelPrize ;
+      sh:minCount 1 .
+
+nobel-ext:LaureateShape-name  a sh:PropertyShape; 
+      sh:path foaf:name;
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:maxCount 1 .
+
+#####
+# Shapes for class
+# foaf:Person
+####
+nobel-ext:PersonShape a sh:NodeShape;
+    sh:targetClass foaf:Person;
+    sh:property   nobel-ext:PersonShape-affiliation,
+                  nobel-ext:PersonShape-birthPlace,
+                  nobel-ext:PersonShape-deathPlace,
+                  nobel-ext:PersonShape-dateOfBirth,
+                  nobel-ext:PersonShape-dateOfDeath,
+                  nobel-ext:PersonShape-familyName,
+                  nobel-ext:PersonShape-givenName.
+
+# laurate can be affiliate 0,n universities
+nobel-ext:PersonShape-affiliation  a sh:PropertyShape; 
+      sh:path dbpedia:affiliation ;
+      sh:class dbpedia:University .
+
+
+# sh:or and sh:and can currently not be visualized or edited
+nobel-ext:PersonShape-birthPlace  a sh:PropertyShape; 
+      sh:path dbpedia:birthPlace ;
+      sh:and (
+        [
+          sh:class dbpedia:Country ;
+          sh:minCount 1 ;
+          sh:maxCount 1 ;
+        ]
+        [
+          sh:class dbpedia:City ;
+          sh:minCount 1 ;
+          sh:maxCount 1 ;
+        ]
+      ).
+
+nobel-ext:PersonShape-deathPlace  a sh:PropertyShape; 
+      sh:path dbpedia:deathPlace ;
+      sh:and (
+        [
+          sh:class dbpedia:Country ;
+          sh:maxCount 1 ;
+        ]
+        [
+          sh:class dbpedia:City ;
+          sh:maxCount 1 ;
+        ]
+      ).
+
+
+nobel-ext:PersonShape-dateOfBirth  a sh:PropertyShape; 
+      sh:path dbpedia:dateOfBirth ;
+      sh:datatype xsd:date ;
+      sh:minCount 1 ;
+      sh:maxCount 1 .
+
+nobel-ext:PersonShape-dateOfDeath  a sh:PropertyShape; 
+      sh:path dbpedia:dateOfDeath ;
+      sh:datatype xsd:date ;
+      sh:maxCount 1 .
+
+nobel-ext:PersonShape-familyName  a sh:PropertyShape; 
+      sh:path foaf:familyName ;
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:maxCount 1 .
+
+nobel-ext:PersonShape-givenName  a sh:PropertyShape; 
+      sh:path foaf:givenName ;
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:maxCount 1 .
