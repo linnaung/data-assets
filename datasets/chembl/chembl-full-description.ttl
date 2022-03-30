@@ -1,0 +1,392 @@
+@prefix : <http://www.metaphacts.com/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix Help: <http://help.metaphacts.com/resource/> .
+@prefix User: <http://www.metaphacts.com/resource/user/> .
+@prefix Platform: <http://www.metaphacts.com/ontologies/platform#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix Assets: <http://www.metaphacts.com/resource/assets/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix lookup: <http://www.metaphacts.com/ontologies/platform/repository/lookup#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix Service: <http://www.metaphacts.com/ontologies/platform/service/> .
+@prefix Admin: <http://www.metaphacts.com/resource/admin/> .
+@prefix Repository: <http://www.metaphacts.com/ontologies/repository#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ephedra: <http://www.metaphacts.com/ontologies/platform/ephedra#> .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69489 void:triples 12419715;
+  void:classPartition _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69490;
+  void:property <http://rdf.ebi.ac.uk/terms/chembl#hasMolecule> .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69490 void:class <http://rdf.ebi.ac.uk/terms/chembl#Activity>;
+  void:distinctSubjects 12419715 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69491 <http://ldf.fi/void-ext#objectClassPartition>
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69492;
+  void:property <http://rdf.ebi.ac.uk/terms/chembl#hasActivity>;
+  void:triples 37259145 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69492 void:class <http://rdf.ebi.ac.uk/terms/chembl#Activity>;
+  void:distinctObjects 12419715 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69493 <http://ldf.fi/void-ext#objectClassPartition>
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69494;
+  void:property skos:prefLabel;
+  void:triples 1360455 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69494 void:class rdfs:Literal;
+  void:distinctObjects 1359785 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69495 <http://ldf.fi/void-ext#objectClassPartition>
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69497;
+  void:classPartition _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69496;
+  void:property <http://rdf.ebi.ac.uk/terms/chembl#hasAssay>;
+  void:triples 12419715 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69496 void:class <http://rdf.ebi.ac.uk/terms/chembl#Activity>;
+  void:distinctSubjects 12419715 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69497 void:class <http://rdf.ebi.ac.uk/terms/chembl#Assay>;
+  void:distinctObjects 1042288 .
+
+<http://scigraph.springernature.com/things/subjects/> rdfs:label "Nature Subjects Taxonomy" .
+
+<http://bio2rdf.org/chembl:> a <http://identifiers.org/idot/AccessPattern>;
+  <http://identifiers.org/idot/accessIdentifierPattern> "^http://bio2rdf.org/chembl:CHEMBL\\d+";
+  dct:format "application/rdf+xml";
+  dct:publisher <http://bio2rdf.org> .
+
+<http://identifiers.org/chembl.compound/> a <http://identifiers.org/idot/AccessPattern>;
+  <http://identifiers.org/idot/accessIdentifierPattern> "^http://identifiers.org/chembl.compound/CHEMBL\\d+";
+  dct:format "text/html" .
+
+<http://linkedchemistry.info/chembl/chemblid> a <http://identifiers.org/idot/AccessPattern>;
+  <http://identifiers.org/idot/accessIdentifierPattern> "^http://linkedchemistry.info/chembl/CHEMBL\\d+";
+  dct:format "application/rdf+xml" .
+
+<http://rdf.ebi.ac.uk/chembl/annaGaulton> a <http://xmlns.com/foaf/0.1/Person>;
+  schema:thumbnail "https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/medium/public/person/image/gaulton_anna_web_2014.jpg";
+  rdfs:label "Anna Gaulton";
+  <http://xmlns.com/foaf/0.1/member> <http://rdf.ebi.ac.uk/chembl/ebi>;
+  <http://xmlns.com/foaf/0.1/name> "Anna Gaulton" .
+
+<http://rdf.ebi.ac.uk/chembl/chembl> a dcat:Dataset;
+  schema:thumbnail <https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/medium/public/field/image/ChEMBL_clear.png>;
+  dct:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+  dct:rights """The data in ChEMBL is covered by the Creative Commons By Attribution. Under the -BY clause, 
+      we request attribution for subsequent use of ChEMBL. For publications using ChEMBL data, the primary 
+      current citation is:
+
+  1. A. Gaulton, L. Bellis, J. Chambers, M. Davies, A. Hersey, Y. Light, S. McGlinchey, R. Akhtar, A.P. Bento, 
+  B. Al-Lazikani, D. Michalovich, & J.P. Overington (2012) 'ChEMBL: A Large-scale Bioactivity Database For Chemical 
+  Biology and Drug Discovery' Nucl. Acids Res. Database Issue. 40 D1100-1107 DOI:10.1093/nar/gkr777 PMID:21948594
+
+  If ChEMBL is incorporated into other works, we ask that the ChEMBL IDs are preserved, and that the release 
+  number of ChEMBL is clearly displayed."""@en;
+  <http://identifiers.org/idot/alternatePrefix> "chembldb";
+  <http://identifiers.org/idot/preferredPrefix> "chembl";
+  dct:accrualPeriodicity <http://purl.org/cld/freq/quarterly>;
+  dct:alternative "ChEMBLdb"@en;
+  dct:hasPart <http://rdf.ebi.ac.uk/chembl/chembl17_rdf_molecule_dataset>, <http://rdf.ebi.ac.uk/chembl/chembl17_rdf_target_dataset>;
+  dct:references <http://dx.doi.org/10.1093/bioinformatics/btt765>;
+  pav:hasCurrentVersion <http://rdf.ebi.ac.uk/chembl/chembl17>;
+  dcat:hasCurrentVersion <http://rdf.ebi.ac.uk/chembl/chembl17>;
+  dcat:hasVersion <http://rdf.ebi.ac.uk/chembl/chembl17>;
+  <http://purl.org/spar/cito/citesAsAuthority> <http://nar.oxfordjournals.org/content/40/D1/D1100>;
+  schema:logo <http://www.ebi.ac.uk/rdf/sites/ebi.ac.uk.rdf/files/resize/images/rdf/chembl_service_logo-146x48.gif>;
+  dcat:accessURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb>;
+  dcat:distribution <http://rdf.ebi.ac.uk/chembl/chembl17db>, <http://rdf.ebi.ac.uk/chembl/chembl17rdf>;
+  dcat:keyword "assay", "chemical";
+  dcat:theme <http://scigraph.springernature.com/things/subjects/assay-systems>, <http://scigraph.springernature.com/things/subjects/biochemical-assays>,
+    <http://scigraph.springernature.com/things/subjects/bioinformatics>, <http://scigraph.springernature.com/things/subjects/diseases>,
+    <http://scigraph.springernature.com/things/subjects/drug-safety>, <http://scigraph.springernature.com/things/subjects/proteins>,
+    <http://scigraph.springernature.com/things/subjects/small-molecules>, <http://zbw.eu/stw/descriptor/19785-6>;
+  rdfs:label "ChEMBL";
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/ChEMBL>;
+  <http://xmlns.com/foaf/0.1/page> <http://www.ebi.ac.uk/chembl/>;
+  dct:description "ChEMBL is a database of bioactive compounds, their quantitative properties and bioactivities (binding constants, pharmacology and ADMET, etc). The data is abstracted and curated from the primary scientific literature."@en;
+  dct:issued "2013-08-29"^^xsd:date;
+  dct:publisher <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:title "ChEMBL"@en;
+  void:sparqlEndpoint <https://idsm.elixir-czech.cz/sparql/endpoint/idsm> .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17> a dcat:Dataset;
+  dct:creator <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:contributor <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  dct:created "2013-08"^^xsd:gYearMonth;
+  dct:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+  prov:wasDerivedFrom <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  dct:rights """The data in ChEMBL is covered by the Creative Commons By Attribution. Under the -BY clause, 
+      we request attribution for subsequent use of ChEMBL. For publications using ChEMBL data, the primary current 
+      citation is:
+
+  1. A. Gaulton, L. Bellis, J. Chambers, M. Davies, A. Hersey, Y. Light, S. McGlinchey, R. Akhtar, A.P. Bento, 
+  B. Al-Lazikani, D. Michalovich, & J.P. Overington (2012) 'ChEMBL: A Large-scale Bioactivity Database For Chemical 
+  Biology and Drug Discovery' Nucl. Acids Res. Database Issue. 40 D1100-1107 DOI:10.1093/nar/gkr777 PMID:21948594
+
+  If ChEMBL is incorporated into other works, we ask that the ChEMBL IDs are preserved, and that the release number 
+  of ChEMBL is clearly displayed."""@en;
+  <http://identifiers.org/idot/alternatePrefix> "chembldb";
+  <http://identifiers.org/idot/preferredPrefix> "chembl";
+  dct:alternative "ChEMBLdb17"@en;
+  dct:conformsTo <http://www.w3.org/2001/sw/hcls/notes/hcls-dataset/>;
+  dct:hasPart <http://rdf.ebi.ac.uk/chembl/chembl17_rdf_molecule_dataset>, <http://rdf.ebi.ac.uk/chembl/chembl17_rdf_target_dataset>;
+  dct:isVersionOf <http://rdf.ebi.ac.uk/chembl/chembl>;
+  dct:language <http://lexvo.org/id/iso639-3/eng>;
+  dct:references <http://dx.doi.org/10.1093/bioinformatics/btt765>;
+  dct:source <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:authoredBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:authoredOn "2013-07"^^xsd:gYearMonth;
+  pav:createdBy <http://orcid.org/0000-0002-8011-0300>;
+  pav:createdOn "2013-08"^^xsd:gYearMonth;
+  pav:curatedBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:curatedOn "2013-07"^^xsd:gYearMonth;
+  pav:previousVersion <http://rdf.ebi.ac.uk/chembl/chembl16>;
+  pav:retrievedFrom <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:version "17", "17.0";
+  dcat:version "17", "17.0";
+  <http://purl.org/spar/cito/citesAsAuthority> <http://nar.oxfordjournals.org/content/40/D1/D1100>;
+  schema:logo <http://www.ebi.ac.uk/rdf/sites/ebi.ac.uk.rdf/files/resize/images/rdf/chembl_service_logo-146x48.gif>;
+  dcat:accessURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_17/>;
+  dcat:distribution <http://rdf.ebi.ac.uk/chembl/chembl17db>, <http://rdf.ebi.ac.uk/chembl/chembl17rdf>;
+  dcat:keyword "assay", "chemical";
+  dcat:landingPage <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_17/chembl_17_release_notes.txt>;
+  dcat:theme <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48807>;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/ChEMBL>;
+  <http://xmlns.com/foaf/0.1/page> <http://www.ebi.ac.uk/chembl/>;
+  dct:description "ChEMBL17 is a database of bioactive compounds, their quantitative properties and bioactivities (binding constants, pharmacology and ADMET, etc). The data is abstracted and curated from the primary scientific literature."@en;
+  dct:issued "2013-08-29"^^xsd:date;
+  dct:publisher <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:title "ChEMBL Version 17"@en .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17-uniprot-exactMatch-linkset> a dcat:Distribution,
+    void:Linkset;
+  dct:creator <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:contributor <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  dct:created "2013-08"^^xsd:gYearMonth;
+  dct:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+  prov:wasDerivedFrom <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  dct:rights """The data in ChEMBL is covered by the Creative Commons By Attribution. Under the -BY clause, we request
+  attribution for subsequent use of ChEMBL. For publications using ChEMBL data, the primary current citation is:
+
+  1. A. Gaulton, L. Bellis, J. Chambers, M. Davies, A. Hersey, Y. Light, S. McGlinchey, R. Akhtar, A.P. Bento,
+  B. Al-Lazikani, D. Michalovich, & J.P. Overington (2012) 'ChEMBL: A Large-scale Bioactivity Database For
+  Chemical Biology and Drug Discovery' Nucl. Acids Res. Database Issue. 40 D1100-1107 DOI:10.1093/nar/gkr777 PMID:21948594
+
+  If ChEMBL is incorporated into other works, we ask that the ChEMBL IDs are preserved, and that the release number of
+  ChEMBL is clearly displayed."""@en;
+  <http://identifiers.org/idot/accessPattern> "http://bio2rdf.org/chembl", "http://identifiers.org/chembl.compound/",
+    "http://linkedchemistry.info/chembl/chemblid", "http://www.ebi.ac.uk/chembl/compound/inspect/";
+  <http://identifiers.org/idot/alternatePrefix> "chembldb";
+  <http://identifiers.org/idot/exampleIdentifier> "CHEMBL_TC_4803";
+  <http://identifiers.org/idot/identifierPattern> "CHEMBL\\d+";
+  <http://identifiers.org/idot/preferredPrefix> "chembl";
+  dct:alternative "ChEMBLTargetCmpt2UniProtEMLS"@en;
+  dct:conformsTo <http://www.w3.org/2001/sw/hcls/notes/hcls-dataset/>;
+  dct:format "application/gzip", "text/turtle", <http://www.w3.org/ns/formats/Turtle>;
+  dct:language <http://lexvo.org/id/iso639-3/eng>;
+  dct:references <http://dx.doi.org/10.1093/bioinformatics/btt765>;
+  dct:source <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:authoredBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:authoredOn "2013-07"^^xsd:gYearMonth;
+  pav:createdBy <http://orcid.org/0000-0002-8011-0300>;
+  pav:createdOn "2013-08"^^xsd:gYearMonth;
+  pav:createdWith <http://rdf.ebi.ac.uk/chembl/chembl-sql2rdf-exporter-v1>;
+  pav:curatedBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:curatedOn "2013-07"^^xsd:gYearMonth;
+  pav:previousVersion <http://rdf.ebi.ac.uk/chembl/chembl16-uniprot-exactMatch-linkset>;
+  pav:retrievedFrom <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:version "17", "17.0";
+  <http://purl.org/spar/cito/citesAsAuthority> <http://nar.oxfordjournals.org/content/40/D1/D1100>;
+  schema:logo <http://www.ebi.ac.uk/rdf/sites/ebi.ac.uk.rdf/files/resize/images/rdf/chembl_service_logo-146x48.gif>;
+  <http://semanticscience.org/resource/has-data-item> <http://rdf.ebi.ac.uk/resource/chembl/targetcomponent/CHEMBL_TC_4803>;
+  dcat:accessURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17/>;
+  dcat:downloadURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17.0_targetcmpt_uniprot_ls.ttl.gz>;
+  dcat:keyword "assay", "protein";
+  dcat:landingPage <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17/chembl_17_release_notes.txt>;
+  dcat:theme <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021>;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/ChEMBL>;
+  <http://xmlns.com/foaf/0.1/page> <http://www.ebi.ac.uk/chembl/>;
+  dct:description """A linkset connecting ChEMBL target components with their corresponding UniProt protein entry where
+  the match is deemed to be exact."""@en;
+  dct:issued "2013-08-29"^^xsd:date;
+  dct:publisher <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:title "ChEMBL Target Component to UniProt Protein Exact Match Linkset"@en;
+  void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17.0_targetcmpt_uniprot_ls.ttl.gz>;
+  void:exampleResource <http://rdf.ebi.ac.uk/resource/chembl/targetcomponent/CHEMBL_TC_4803>;
+  void:linkPredicate skos:exactMatch;
+  void:objectsTarget <http://purl.uniprot.org/void#UniProtDataset_2015_03>;
+  void:subjectsTarget <http://rdf.ebi.ac.uk/chembl/chembl-rdf>;
+  void:triples 6367;
+  void:uriRegexPattern "http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL\\d+";
+  void:vocabulary <http://rdf.ebi.ac.uk/terms/chembl#>, <http://www.w3.org/ns/dcat#>,
+    <http://purl.org/dc/terms/> .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17db> a dcat:Distribution;
+  dct:creator <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:contributor <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  dct:created "2013-08"^^xsd:gYearMonth;
+  dct:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+  dct:rights """The data in ChEMBL is covered by the Creative Commons By Attribution. Under the -BY clause, 
+      we request attribution for subsequent use of ChEMBL. For publications using ChEMBL data, the primary current 
+      citation is:
+
+  1. A. Gaulton, L. Bellis, J. Chambers, M. Davies, A. Hersey, Y. Light, S. McGlinchey, R. Akhtar, A.P. Bento, 
+  B. Al-Lazikani, D. Michalovich, & J.P. Overington (2012) 'ChEMBL: A Large-scale Bioactivity Database For Chemical 
+  Biology and Drug Discovery' Nucl. Acids Res. Database Issue. 40 D1100-1107 DOI:10.1093/nar/gkr777 PMID:21948594
+
+  If ChEMBL is incorporated into other works, we ask that the ChEMBL IDs are preserved, and that the release 
+  number of ChEMBL is clearly displayed."""@en;
+  <http://identifiers.org/idot/accessPattern> "http://bio2rdf.org/chembl", "http://identifiers.org/chembl.compound/",
+    "http://linkedchemistry.info/chembl/chemblid", "http://www.ebi.ac.uk/chembl/compound/inspect/";
+  <http://identifiers.org/idot/alternatePrefix> "chembldb";
+  <http://identifiers.org/idot/exampleIdentifier> "CHEMBL25";
+  <http://identifiers.org/idot/identifierPattern> "CHEMBL\\d+";
+  <http://identifiers.org/idot/preferredPrefix> "chembl";
+  dct:alternative "ChEMBLdb17db"@en;
+  dct:conformsTo <http://www.w3.org/2001/sw/hcls/notes/hcls-dataset/>;
+  dct:format "application/sql";
+  dct:language <http://lexvo.org/id/iso639-3/eng>;
+  dct:references <http://dx.doi.org/10.1093/bioinformatics/btt765>;
+  dct:source <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:authoredBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:authoredOn "2013-07"^^xsd:gYearMonth;
+  pav:createdBy <http://orcid.org/0000-0002-8011-0300>;
+  pav:createdOn "2013-08"^^xsd:gYearMonth;
+  pav:createdWith <http://example.com/madeUp/editor>;
+  pav:curatedBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:curatedOn "2013-07"^^xsd:gYearMonth;
+  pav:previousVersion <http://rdf.ebi.ac.uk/chembl/chembl16db>;
+  pav:version "17", "17.0";
+  <http://purl.org/spar/cito/citesAsAuthority> <http://nar.oxfordjournals.org/content/40/D1/D1100>;
+  schema:logo <http://www.ebi.ac.uk/rdf/sites/ebi.ac.uk.rdf/files/resize/images/rdf/chembl_service_logo-146x48.gif>;
+  dcat:accessURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_17/>;
+  dcat:byteSize 861443887.0;
+  dcat:downloadURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_17/chembl_17_mysql.tar.gz>;
+  dcat:keyword "assay", "chemical";
+  dcat:landingPage <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_17/chembl_17_release_notes.txt>;
+  dcat:theme <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48807>;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/ChEMBL>;
+  <http://xmlns.com/foaf/0.1/page> <http://www.ebi.ac.uk/chembl/>;
+  dct:description "ChEMBL17 database distribution is a database of bioactive compounds, their quantitative properties and bioactivities (binding constants, pharmacology and ADMET, etc). The data is abstracted and curated from the primary scientific literature."@en;
+  dct:issued "2013-08-29"^^xsd:date;
+  dct:publisher <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:title "ChEMBL Version 17 Database Distribution"@en .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17rdf> a dcat:Distribution;
+  dct:creator <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:contributor <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  dct:created "2013-08"^^xsd:gYearMonth;
+  dct:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+  prov:wasDerivedFrom <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  dct:rights """The data in ChEMBL is covered by the Creative Commons By Attribution. Under the -BY clause, 
+      we request attribution for subsequent use of ChEMBL. For publications using ChEMBL data, the primary current 
+      citation is:
+
+  1. A. Gaulton, L. Bellis, J. Chambers, M. Davies, A. Hersey, Y. Light, S. McGlinchey, R. Akhtar, A.P. Bento, 
+  B. Al-Lazikani, D. Michalovich, & J.P. Overington (2012) 'ChEMBL: A Large-scale Bioactivity Database For Chemical 
+  Biology and Drug Discovery' Nucl. Acids Res. Database Issue. 40 D1100-1107 DOI:10.1093/nar/gkr777 PMID:21948594
+
+  If ChEMBL is incorporated into other works, we ask that the ChEMBL IDs are preserved, and that the release number 
+  of ChEMBL is clearly displayed."""@en;
+  <http://identifiers.org/idot/accessPattern> "http://bio2rdf.org/chembl", "http://identifiers.org/chembl.compound/",
+    "http://linkedchemistry.info/chembl/chemblid", "http://www.ebi.ac.uk/chembl/compound/inspect/";
+  <http://identifiers.org/idot/alternatePrefix> "chembldb";
+  <http://identifiers.org/idot/exampleIdentifier> "CHEMBL25";
+  <http://identifiers.org/idot/identifierPattern> "CHEMBL\\d+";
+  <http://identifiers.org/idot/preferredPrefix> "chembl";
+  dct:alternative "ChEMBLdb17rdf"@en;
+  dct:conformsTo <http://www.w3.org/2001/sw/hcls/notes/hcls-dataset/>;
+  dct:format "application/gzip", "text/turtle", <http://www.w3.org/ns/formats/Turtle>;
+  dct:language <http://lexvo.org/id/iso639-3/eng>;
+  dct:references <http://dx.doi.org/10.1093/bioinformatics/btt765>;
+  dct:source <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:authoredBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:authoredOn "2013-07"^^xsd:gYearMonth;
+  pav:createdBy <http://orcid.org/0000-0002-8011-0300>;
+  pav:createdOn "2013-08"^^xsd:gYearMonth;
+  pav:createdWith <http://rdf.ebi.ac.uk/chembl/chembl-sql2rdf-exporter-v1>;
+  pav:curatedBy <http://rdf.ebi.ac.uk/chembl/annaGaulton>;
+  pav:curatedOn "2013-07"^^xsd:gYearMonth;
+  pav:previousVersion <http://rdf.ebi.ac.uk/chembl/chembl16rdf>;
+  pav:retrievedFrom <http://rdf.ebi.ac.uk/chembl/pubchem-bioassay-09-01-2014>;
+  pav:version "17", "17.0";
+  <http://purl.org/spar/cito/citesAsAuthority> <http://nar.oxfordjournals.org/content/40/D1/D1100>;
+  schema:logo <http://www.ebi.ac.uk/rdf/sites/ebi.ac.uk.rdf/files/resize/images/rdf/chembl_service_logo-146x48.gif>;
+  <http://semanticscience.org/resource/has-data-item> <http://rdf.ebi.ac.uk/resource/chembl/compound/CHEMBL25>;
+  dcat:accessURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17/>;
+  dcat:downloadURL <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17/chembl_17_molecule.ttl.gz>;
+  dcat:keyword "assay", "chemical";
+  dcat:landingPage <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17/chembl_17_release_notes.txt>;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/ChEMBL>;
+  <http://xmlns.com/foaf/0.1/page> <http://www.ebi.ac.uk/chembl/>;
+  dct:description "ChEMBL17 RDF distribution is a database of bioactive compounds, their quantitative properties and bioactivities (binding constants, pharmacology and ADMET, etc). The data is abstracted and curated from the primary scientific literature."@en;
+  dct:issued "2013-08-29"^^xsd:date;
+  dct:publisher <http://rdf.ebi.ac.uk/chembl/ebi>;
+  dct:title "ChEMBL Version 17 RDF Distribution"@en;
+  void:classPartition <http://rdf.ebi.ac.uk/chembl/chembl17rdf_ActivityPartition>, <http://rdf.ebi.ac.uk/chembl/chembl17rdf_SubstancePartition>,
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69486, _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69487,
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69488;
+  void:dataDump <ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBL-RDF/17.0/chembl_17_molecule.ttl.gz>;
+  void:distinctObjects 50128234;
+  void:distinctSubjects 50062405;
+  void:entities 50061452;
+  void:exampleResource <http://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL25>;
+  void:properties 141;
+  void:propertyPartition <http://rdf.ebi.ac.uk/chembl/chembl17rdf_hasActivityPartition>,
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69489, _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69491,
+    _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69493, _:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69495;
+  void:subset <http://rdf.ebi.ac.uk/chembl/chembl17_rdf_molecule_dataset>, <http://rdf.ebi.ac.uk/chembl/chembl17_rdf_target_dataset>,
+    <http://rdf.ebi.ac.uk/chembl/chembl17-uniprot-exactMatch-linkset>;
+  void:triples 409942525;
+  void:uriRegexPattern "http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL\\d+";
+  void:vocabulary <http://rdf.ebi.ac.uk/terms/chembl#>, <http://www.w3.org/ns/dcat#>,
+    <http://purl.org/dc/terms/> .
+
+<http://rdf.ebi.ac.uk/chembl/ebi> a <http://xmlns.com/foaf/0.1/Organization>;
+  schema:thumbnail <https://www.embl-hamburg.de/layout/images/external/common/embl_logo.png>;
+  rdfs:label "EBI";
+  <http://xmlns.com/foaf/0.1/page> <https://www.ebi.ac.uk/chembl/> .
+
+<http://www.ebi.ac.uk/chembl/compound/inspect/> a <http://identifiers.org/idot/AccessPattern>;
+  <http://identifiers.org/idot/accessIdentifierPattern> "^http://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL\\d+";
+  <http://identifiers.org/idot/primarySource> true;
+  dct:format "text/html";
+  dct:publisher <http://www.ebi.ac.uk> .
+
+<http://rdf.ebi.ac.uk/resource/chembl/activity/CHEMBL_ACT_10016356> a <http://rdf.ebi.ac.uk/terms/chembl#Activity> .
+
+<http://rdf.ebi.ac.uk/resource/chembl/molecule/CHEMBL25> schema:thumbnail "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Aspirin-Sructural.svg/400px-Aspirin-Sructural.svg.png" .
+
+<https://idsm.elixir-czech.cz/sparql/endpoint/idsm> a dcat:Service;
+  rdfs:label "ChEMBL SPARQL Endpoint" .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17rdf_ActivityPartition> a void:Dataset;
+  void:class <http://rdf.ebi.ac.uk/terms/chembl#Activity>;
+  void:entities 12419715 .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17rdf_hasActivityPartition> a void:Dataset;
+  void:property <http://rdf.ebi.ac.uk/terms/chembl#hasActivity>;
+  void:triples 37259145 .
+
+<http://rdf.ebi.ac.uk/chembl/chembl17rdf_SubstancePartition> a void:Dataset;
+  void:class <http://rdf.ebi.ac.uk/terms/chembl#Substance>;
+  void:entities 2086898 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69486 void:class rdfs:Class;
+  void:distinctSubjects 110 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69487 void:class rdfs:Literal;
+  void:distinctSubjects 58067345 .
+
+_:genid-2ffa3af56ae64fb68f2e68b0ba48b6fe-t69488 void:class sd:Graph;
+  void:distinctSubjects 8 .

@@ -1,0 +1,449 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<https://io.datascience-paris-saclay.fr/dataset/> .
+@prefix ns2:	<http://www.w3.org/ns/dcat#> .
+@prefix geo:	<http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns4:	<http://www.wikidata.org/entity/> .
+@prefix ns5:	<http://purl.org/dc/terms/> .
+@prefix ns6:	<https://io.datascience-paris-saclay.fr/dataset/Scholarly_Linked_Open_Data#> .
+@prefix ns7:	<https://io.datascience-paris-saclay.fr/dataset/DAAP_Lip_Sys#> .
+@prefix ns8:	<http://www.pmm.u-psud.fr/spip.php?> .
+@prefix ns9:	<https://io.datascience-paris-saclay.fr/dataset/DAAP_PMM#> .
+@prefix ns10:	<https://io.datascience-paris-saclay.fr/dataset/DBPedia#> .
+@prefix ns11:	<http://www.universite-paris-saclay.fr/fr/Vie-de-campus/> .
+@prefix ns12:	<https://io.datascience-paris-saclay.fr/dataset/Libraries_of_Paris_Saclay_University#> .
+@prefix ns13:	<https://io.datascience-paris-saclay.fr/dataset/YAGO#> .
+@prefix ns14:	<https://io.datascience-paris-saclay.fr/dataset/Wikidata#> .
+@prefix ns15:	<https://io.datascience-paris-saclay.fr/dataset/IODS#> .
+@prefix ns16:	<https://io.datascience-paris-saclay.fr/dataset/Sparql_Score#> .
+@prefix ns17:	<https://io.datascience-paris-saclay.fr/dataset/efSUP_sem1#> .
+@prefix ns18:	<https://io.datascience-paris-saclay.fr/dataset/data_bnf_fr#> .
+@prefix ns19:	<https://io.datascience-paris-saclay.fr/dataset/Linked_Open_Data_platform_for_EBI_data#> .
+@prefix ns20:	<https://io.datascience-paris-saclay.fr/dataset/Biomodels#> .
+@prefix ns21:	<https://io.datascience-paris-saclay.fr/dataset/BioSD#> .
+@prefix ns22:	<https://io.datascience-paris-saclay.fr/dataset/ChEMBL#> .
+@prefix ns23:	<https://io.datascience-paris-saclay.fr/dataset/Ensembl#> .
+@prefix ns24:	<https://io.datascience-paris-saclay.fr/dataset/Reactome#> .
+@prefix ns25:	<https://io.datascience-paris-saclay.fr/dataset/Expression_Atlas#> .
+@prefix ns26:	<https://io.datascience-paris-saclay.fr/dataset/Ontology_Lookup_Service#> .
+@prefix ns27:	<https://www.bioontology.org/wiki/index.php/> .
+@prefix ns28:	<https://io.datascience-paris-saclay.fr/dataset/BioPortal#> .
+@prefix ns29:	<https://www.wikipathways.org/index.php/> .
+@prefix ns30:	<https://io.datascience-paris-saclay.fr/dataset/WikiPathways#> .
+@prefix ns31:	<https://io.datascience-paris-saclay.fr/dataset/OrthoDB#> .
+@prefix ns32:	<https://io.datascience-paris-saclay.fr/dataset/IdRef#> .
+@prefix sd:	<http://www.w3.org/ns/sparql-service-description#> .
+@prefix ns34:	<http://www.scholarlydata.org/> .
+@prefix ns35:	<https://io.datascience-paris-saclay.fr/dataset/14#> .
+@prefix ns36:	<https://go3.opendata.u-psud.fr/> .
+@prefix ns37:	<https://io.datascience-paris-saclay.fr/dataset/LRI_Information_System#> .
+@prefix ns38:	<https://sparql.lri.fr/> .
+@prefix ns39:	<https://opendata1.opendata.u-psud.fr/> .
+@prefix ns40:	<http://dbpedia.org/> .
+@prefix ns41:	<https://linkeddata1.calcul.u-psud.fr/> .
+@prefix ns42:	<https://query.wikidata.org/> .
+@prefix ns43:	<https://io.datascience-paris-saclay.fr/> .
+@prefix ns44:	<https://data.bnf.fr/> .
+@prefix ns45:	<https://www.ebi.ac.uk/rdf/services/> .
+@prefix ns46:	<https://sparql.orthodb.org/> .
+@prefix ns47:	<https://data.idref.fr/> .
+@prefix ns48:	<https://io.datascience-paris-saclay.fr/dataset/Lipid_modifications_in_J774_macrophages_by_vibrational_spectroscopies#> .
+
+ns1:Scholarly_Linked_Open_Data
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q54837 ;
+	ns5:title	"Scholarly Linked Open Data" ;
+	geo:long	12.487844 ;
+	geo:lat	41.919504 ;
+	ns2:contactPoint	<mailto:contact@scholarlydata.org> ;
+	ns2:landingPage	ns34: ;
+	ns5:description	"ScholarlyData.org provides facilities and services to pubish you scholarly data as Linked Open Data" ;
+	ns2:keyword	"university" , "linked data page" ;
+	ns2:distribution	ns6:distribution58 .
+ns1:DAAP_Lip_Sys
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q2346 , ns4:Q2329 ;
+	ns5:title	"DAAP Lip(Sys)\u00B2" ;
+	geo:long	2.273655 ;
+	geo:lat	48.762172 ;
+	ns2:contactPoint	<mailto:sana.tfaili@u-psud.fr> ;
+	ns2:landingPage	<https://daap.dsi.universite-paris-saclay.fr/wiki/Lip(Sys)2> ;
+	ns5:description	"This wiki is a demonstrator for the project under construction DAAP (Data Acquisition For Analytical Platform). The target is to bring together the research community in Analytical Chemistry. The first step is to reference the resources available to researchers, and then to share data." ;
+	ns2:keyword	"lipidomics" , "lipids" , "Spectroscope" , "skin" , "phospholipid" ;
+	ns2:distribution	ns7:distribution19 .
+ns1:DAAP_PMM
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q2346 ;
+	ns5:title	"DAAP PMM" ;
+	geo:long	2.167869 ;
+	geo:lat	48.711212 ;
+	ns2:contactPoint	<mailto:valerie.cantonny@u-psud.fr> ;
+	ns2:landingPage	ns8:article2 ;
+	ns5:description	"This wiki is a demonstrator for the project under construction DAAP (Data Acquisition For Analytical Platform). Its target is to bring together the research community in Analytical Chemistry." ;
+	ns2:keyword	"scientific technique" , "Spectroscope" ;
+	ns2:distribution	ns9:distribution20 .
+ns1:DBPedia
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q1930471 ;
+	ns5:title	"DBPedia" ;
+	geo:long	2.167427 ;
+	geo:lat	48.712409 ;
+	ns2:contactPoint	<mailto:karima.rafes@gmail.com> ;
+	ns2:landingPage	<http://wiki.dbpedia.org/> ;
+	ns5:description	"A knowledge base extracted from Wikipedia" ;
+	ns2:keyword	"Wikipedia" , "DBpedia" ;
+	ns2:distribution	ns10:distribution57 .
+ns1:Libraries_of_Paris_Saclay_University
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q11042 ;
+	ns5:title	"Libraries of Paris-Saclay University" ;
+	geo:long	2.167427 ;
+	geo:lat	48.712409 ;
+	ns2:contactPoint	<mailto:karima.rafes@gmail.com> ;
+	ns2:landingPage	ns11:Bibliotheques ;
+	ns5:description	"List of libraries in the Paris-Saclay University." ;
+	ns2:keyword	"college library" , "Paris-Saclay University" , "academic library" ;
+	ns2:distribution	ns12:distribution22 .
+ns1:YAGO
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q1930471 ;
+	ns5:title	"YAGO" ;
+	geo:long	2.346509 ;
+	geo:lat	48.826877 ;
+	ns2:contactPoint	<mailto:suchanek@telecom-paristech.fr> ;
+	ns2:landingPage	<http://yago-knowledge.org> ;
+	ns5:description	"A knowledge base extracted from Wikipedia, containing general knowledge about famous people, cities, countries, movies, organizations, etc, together with a taxonomy from WordNet." ;
+	ns2:keyword	"Wikipedia" , "YAGO" ;
+	ns2:distribution	ns13:distribution26 .
+ns1:Wikidata
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q1930471 , ns4:Q54837 ;
+	ns5:title	"Wikidata" ;
+	geo:long	-122.401212 ;
+	geo:lat	37.788166 ;
+	ns2:contactPoint	<mailto:karima.rafes@gmail.com> ;
+	ns2:landingPage	<https://www.wikidata.org> ;
+	ns5:description	"Wikidata is a free linked database for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wikisource and others.\r\nThe content is available under a free license, exported using standard formats, and can be interlinked to other open data sets on the linked data web." ;
+	ns2:keyword	"Wikipedia" , "Wikidata" , "Wikivoyage" , "Wikisource" ;
+	ns2:distribution	ns14:distribution30 .
+ns1:IODS
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q515701 ;
+	ns5:title	"IODS" ;
+	geo:long	2.170167 ;
+	geo:lat	48.699229 ;
+	ns2:contactPoint	<mailto:karima.rafes@gmail.com> ;
+	ns2:landingPage	<https://io.datascience-paris-saclay.fr> ;
+	ns5:description	"List of open dataset in io.datascience-paris-saclay.fr" ;
+	ns2:keyword	"Paris-Saclay University" ;
+	ns2:distribution	ns15:distribution25 .
+ns1:Sparql_Score
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q21198 ;
+	ns5:title	"Sparql Score" ;
+	geo:long	2.254882 ;
+	geo:lat	48.823069 ;
+	ns2:contactPoint	<mailto:karima.rafes@gmail.com> ;
+	ns2:landingPage	<http://sparqlscore.com/> ;
+	ns5:description	"SPARQLScore is an attempt to evaluate the conformance of triplestores to the W3C standards." ;
+	ns2:keyword	"linked data" , "SPARQL" ;
+	ns2:distribution	ns16:distribution29 .
+ns1:efSUP_sem1
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q967853 ;
+	ns5:title	"efSUP_sem1" ;
+	geo:long	2.328015 ;
+	geo:lat	48.789199 ;
+	ns2:contactPoint	<mailto:tony.doat@ens-cachan.fr> ;
+	ns2:landingPage	<http://www.stef.ens-cachan.fr/> ;
+	ns5:description	"jeu de donn\u00E9es pour de tests" ;
+	ns2:keyword	"School" ;
+	ns2:distribution	ns17:distribution45 , ns17:distribution46 .
+ns1:data_bnf_fr
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q7075 ;
+	ns5:title	"French National Library" ;
+	geo:long	2.375858 ;
+	geo:lat	48.833636 ;
+	ns2:contactPoint	<mailto:julien.nauroy@u-psud.fr> ;
+	ns2:landingPage	<http://data.bnf.fr/> ;
+	ns5:description	"The data.bnf.fr project endeavours to make the data produced by Biblioth\u00E8que nationale de France (French National Library) more useful on the Web." ;
+	ns2:keyword	"BnF" ;
+	ns2:distribution	ns18:distribution47 .
+ns1:Linked_Open_Data_platform_for_EBI_data
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"EMBL-EBI resources" ;
+	geo:long	0.185169 ;
+	geo:lat	52.082908 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/> ;
+	ns5:description	"The European Bioinformatics Institute (EMBL-EBI) Platform aims to bring together the efforts of a number of EMBL-EBI resources that provide access to their data using Semantic Web technologies. It provides a unified way to query across resources using the W3C SPARQL query language." ;
+	ns2:keyword	"EBI databases and services." , "EBI" ;
+	ns2:distribution	ns19:distribution84 .
+ns1:Biomodels
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"Biomodels" ;
+	geo:long	0.185169 ;
+	geo:lat	52.082882 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/biomodels/> ;
+	ns5:description	"BioModels linked data set contains all curated and non curated SBML models in the BioModels repository in RDF. " ;
+	ns2:distribution	ns20:distribution85 .
+ns1:BioSD
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"Biosamples" ;
+	geo:long	0.185169 ;
+	geo:lat	52.082908 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/biosamples/> ;
+	ns5:description	"The BioSample Database (BioSD) is a database at European Bioinformatics Institute for the information about the biological samples used in DNA sequencing." ;
+	ns2:keyword	"BioSD" , "DNA" ;
+	ns2:distribution	ns21:distribution86 .
+ns1:ChEMBL
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"ChEMBL" ;
+	geo:long	0.18519 ;
+	geo:lat	52.082882 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/chembl/> ;
+	ns5:description	"ChEMBL is a manually curated chemical database of bioactive molecules with drug-like properties. It is maintained by the European Bioinformatics Institute (EBI), of the European Molecular Biology Laboratory (EMBL)." ;
+	ns2:keyword	"ChEMBL" ;
+	ns2:distribution	ns22:distribution87 .
+ns1:Ensembl
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"Ensembl" ;
+	geo:long	0.18522 ;
+	geo:lat	52.082915 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/ensembl/> ;
+	ns5:description	"Ensembl is a genome browser for vertebrate genomes that supports research in comparative genomics, evolution, sequence variation and transcriptional regulation. Ensembl annotate genes, computes multiple alignments, predicts regulatory function and collects disease data. " ;
+	ns2:keyword	"Ensembl" , "genome" , "Vertebrata" ;
+	ns2:distribution	ns23:distribution88 .
+ns1:Reactome
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"Reactome" ;
+	geo:long	0.185228 ;
+	geo:lat	52.082921 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/reactome/> ;
+	ns5:description	"Reactome is a free, open-source, curated and peer reviewed pathway database. Our goal is to provide intuitive bioinformatics tools for the visualization, interpretation and analysis of pathway knowledge to support basic research, genome analysis, modeling, systems biology and education." ;
+	ns2:keyword	"biological pathway" , "Reactome" ;
+	ns2:distribution	ns24:distribution89 .
+ns1:Expression_Atlas
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"Expression Atlas" ;
+	geo:long	0.185207 ;
+	geo:lat	52.082908 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/expressionatlas/> ;
+	ns5:description	"A powerful way to find information about gene and protein expression across species and biological conditions. It aims to help answering questions such as \u2018where is a certain gene expressed?\u2019 or \u2018how does its expression change in a disease?\u2019." ;
+	ns2:keyword	"gene" , "protein" , "disease" , "species" , "Expression Atlas" ;
+	ns2:distribution	ns25:distribution90 .
+ns1:Ontology_Lookup_Service
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"Ontology Lookup Service" ;
+	geo:long	0.185207 ;
+	geo:lat	52.082921 ;
+	ns2:contactPoint	<mailto:rdf-req@ebi.ac.uk> ;
+	ns2:landingPage	<https://www.ebi.ac.uk/rdf/documentation/ols/> ;
+	ns5:description	"The Ontology Lookup Service (OLS) is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions." ;
+	ns2:keyword	"biomedical engineering" , "Ontology Lookup Service" , "ontology" ;
+	ns2:distribution	ns26:distribution91 .
+ns1:BioPortal
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"BioPortal" ;
+	geo:long	-122.170973 ;
+	geo:lat	37.428933 ;
+	ns2:contactPoint	<mailto:support@bioontology.org> ;
+	ns2:landingPage	ns27:SPARQL_BioPortal ;
+	ns5:description	"BioPortal SPARQL is a service to query BioMedical ontologies using the SPARQL standard. Ontologies have been transformed into RDF triples from their original formats (OWL, OBO and UMLS/RRF, ...) and asserted into a triple store. " ;
+	ns2:keyword	"BioPortal: ontologies and integrated data resources at the click of a mouse" , "ontology" ;
+	ns2:distribution	ns28:distribution92 .
+ns1:WikiPathways
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"WikiPathways" ;
+	geo:long	-122.394468 ;
+	geo:lat	37.767704 ;
+	ns2:contactPoint	<mailto:apico@gladstone.ucsf.edu> ;
+	ns2:landingPage	ns29:WikiPathways ;
+	ns5:description	"WikiPathways is a Wiki for biological pathways. WikiPathways is intended to be an open, public space for content editing dedicated to biological pathways, facilitating the contribution and maintenance of pathway information from the scientific community." ;
+	ns2:keyword	"biological pathway" , "WikiPathways" ;
+	ns2:distribution	ns30:distribution93 .
+ns1:OrthoDB
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q420 ;
+	ns5:title	"OrthoDB" ;
+	geo:long	6.144262 ;
+	geo:lat	46.199565 ;
+	ns2:contactPoint	<mailto:dmitry.kuznetsov@sib.swiss> ;
+	ns2:landingPage	<https://www.orthodb.org> ;
+	ns5:description	"Sampling the diversity of animal, plant, fungal, protist, bacterial and viral genomes for evolutionary and functional annotations of orthologs." ;
+	ns2:keyword	"protein" , "species" ;
+	ns2:distribution	ns31:distribution98 .
+ns1:IdRef
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q36524 ;
+	ns5:title	"IdRef" ;
+	geo:long	3.828424 ;
+	geo:lat	43.636184 ;
+	ns2:contactPoint	<mailto:mistral@abes.fr> ;
+	ns2:landingPage	<https://data.idref.fr> ;
+	ns5:description	"Vous trouverez les notices d\u2019autorit\u00E9 IdRef et les r\u00E9f\u00E9rences bibliographiques en provenance du Sudoc. Tous les types de notices d'autorit\u00E9 sont pr\u00E9sents : Personnes, Collectivit\u00E9s, Noms Communs (Rameau et FMeSH), Noms g\u00E9ographiques, Familles et Titres." ;
+	ns2:keyword	"RAMEAU" , "SUDOC" , "IdRef" ;
+	ns2:distribution	ns32:distribution101 .
+ns6:distribution58
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"text/tab-separated-values" , "application/sparql-results+xml" , "application/sparql-results+xml" , "text/csv" ;
+	ns2:accessURL	ns34:sparql .
+<https://io.datascience-paris-saclay.fr/dataset/14>
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q21198 ;
+	ns5:title	"Grid Observatory 3.0" ;
+	geo:long	2.170186 ;
+	geo:lat	48.698318 ;
+	ns2:contactPoint	<mailto:julien.nauroy@u-psud.fr> ;
+	ns2:landingPage	<http://grid-observatory.org/> ;
+	ns5:description	"The Grid Observatory 3.0 aims to publish the Grid Observatory and Green Computing Observatory data in an open and interoperable format in order to facilitate access to these data and the cross-analysis of these complementary data sources." ;
+	ns2:keyword	"LAL" , "monitoring" ;
+	ns2:distribution	ns35:distribution5 .
+ns35:distribution5
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns36:sparql .
+ns37:distribution15
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns38:sparql .
+ns7:distribution19
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns39:sparql ;
+	ns2:tripleSize	1210 .
+ns9:distribution20
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns39:sparql ;
+	ns2:tripleSize	1100 .
+ns10:distribution57
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns40:sparql ;
+	ns2:tripleSize	1440550673 .
+ns12:distribution22
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns39:sparql ;
+	ns2:tripleSize	959 .
+ns13:distribution26
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns41:sparql ;
+	ns2:tripleSize	1001461786 .
+ns14:distribution30
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"text/tab-separated-values" , "application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns42:sparql .
+ns15:distribution25
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns43:sparql .
+ns16:distribution29
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/json" , "text/csv" ;
+	ns2:accessURL	ns39:sparql .
+ns17:distribution45
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns39:sparql ;
+	ns2:tripleSize	829813 .
+ns18:distribution47
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns44:sparql .
+ns19:distribution84
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns20:distribution85
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns21:distribution86
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns22:distribution87
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns23:distribution88
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns24:distribution89
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns25:distribution90
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns26:distribution91
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns45:sparql .
+ns28:distribution92
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	<http://sparql.bioontology.org/> .
+ns30:distribution93
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	<http://sparql.wikipathways.org/> ;
+	ns2:tripleSize	15390889 .
+ns31:distribution98
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns46:sparql ;
+	ns2:tripleSize	1746759709 .
+ns32:distribution101
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/sparql-results+xml" , "application/sparql-results+xml" , "application/sparql-results+json" , "text/csv" ;
+	ns2:accessURL	ns47:sparql ;
+	ns2:tripleSize	110604814 .
+ns1:Lipid_modifications_in_J774_macrophages_by_vibrational_spectroscopies
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q2346 , ns4:Q420 ;
+	ns5:title	"Lipid modifications in J774 macrophages by vibrational spectroscopies" ;
+	geo:long	2.273651 ;
+	geo:lat	48.762212 ;
+	ns2:contactPoint	<mailto:sana.tfaili@u-psud.fr> ;
+	ns2:landingPage	<https://doi.org/10.1016/j.talanta.2019.01.122> ;
+	ns5:description	"Investigation of lipid modifications in J774 macrophages" ;
+	ns2:keyword	"macrophage" , "J-774" , "lipids" , "cell membrane" ;
+	ns2:distribution	ns48:distribution125 , ns48:distribution124 , ns48:distribution129 .
+ns48:distribution125
+	rdf:type	ns2:Distribution , sd:GRAPH ;
+	ns2:mediaType	"application/ld+json" , "text/turtle" , "text/tab-separated-values" , "application/sparql-results+xml" , "application/sparql-results+xml" , "application/rdf+xml" , "application/x-turtle" , "text/csv" ;
+	ns2:accessURL	<https://opendata1.opendata.u-psud.fr/sparql/> ;
+	ns2:tripleSize	4859 .
+ns1:LRI_Information_System
+	rdf:type	ns2:Dataset , geo:Point ;
+	ns2:theme	ns4:Q21198 ;
+	ns5:title	"LRI Information System" ;
+	geo:long	2.168555 ;
+	geo:lat	48.712628 ;
+	ns2:contactPoint	<mailto:humbert@lri.fr> ;
+	ns2:landingPage	<https://www.lri.fr> ;
+	ns5:description	"Scientists of the laboratory" ;
+	ns2:keyword	"LRI" ;
+	ns2:distribution	ns37:distribution15 .

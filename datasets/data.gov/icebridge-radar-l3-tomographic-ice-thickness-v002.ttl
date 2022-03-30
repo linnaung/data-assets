@@ -1,0 +1,92 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831> a dcat:Dataset ;
+    dct:description "This data set contains Level-3 tomographic ice thickness measurements and ice thickness errors over areas of Greenland and Antarctica. Two of the data files additionally provide bed elevation measurements. The data were derived from measurements taken by the Center for Remote Sensing of Ice Sheets (CReSIS) Multichannel Coherent Radar Depth Sounder (MCoRDS) instrument and were collected as part of NASA Operation IceBridge funded campaigns." ;
+    dct:identifier "C1586132466-NSIDC_ECS" ;
+    dct:issued "2010-11-20T00:00:00"^^xsd:dateTime ;
+    dct:language "en-US" ;
+    dct:modified "2013-04-20T00:00:00"^^xsd:dateTime ;
+    dct:publisher <https://catalog.data.gov/organization/f4ca4614-8901-409b-8553-2e994ad10023> ;
+    dct:spatial [ a dct:Location ;
+            locn:geometry "-180.0 -90.0 180.0 -63.0"^^<https://www.iana.org/assignments/media-types/application/vnd.geo+json> ] ;
+    dct:title "IceBridge Radar L3 Tomographic Ice Thickness V002" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Xiaoqing Wu" ;
+            vcard:hasEmail <mailto:Xiaoqing.Wu@jpl.nasa.gov> ] ;
+    dcat:distribution <https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/11a90b13-4cf1-4983-946c-32330e5e05d1>,
+        <https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/442bef6a-8167-4e2b-8d65-cb7fabff4135>,
+        <https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/7cfe87f5-1bf1-40a3-bf6c-272d87543827>,
+        <https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/ccb84be3-0c80-4bb9-b6a1-a23a8a13d816>,
+        <https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/d309834b-9ebf-4dcf-82a9-2f4bbc570053>,
+        <https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/e3faac25-1762-424f-ab50-9d53365dfe72> ;
+    dcat:keyword "climate-indicators",
+        "cryospheric-indicators",
+        "earth-science",
+        "land-surface",
+        "topography" ;
+    dcat:theme <2010_AN_NASA>,
+        <2011_GR_NASA>,
+        <2012_GR_NASA>,
+        <2013_GR_NASA>,
+        <geospatial> .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/11a90b13-4cf1-4983-946c-32330e5e05d1> a dcat:Distribution ;
+    dct:description "Includes a user's guide, supplemental documents like ATBDs and academic papers, How Tos, FAQs, etc." ;
+    dct:format "HTML" ;
+    dct:title "View documentation related to this dataset" ;
+    dcat:accessURL <https://doi.org/10.5067/5NSX14QW4U4J> ;
+    dcat:mediaType "text/html" .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/442bef6a-8167-4e2b-8d65-cb7fabff4135> a dcat:Distribution ;
+    dct:description "Direct download via HTTPS protocol." ;
+    dct:format "HTML" ;
+    dct:title "Download this dataset" ;
+    dcat:accessURL <https://n5eil01u.ecs.nsidc.org/ICEBRIDGE/IRTIT3.002/> ;
+    dcat:mediaType "text/html" .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/7cfe87f5-1bf1-40a3-bf6c-272d87543827> a dcat:Distribution ;
+    dct:description "Search results for publications that cite this dataset by its DOI." ;
+    dct:format "HTML" ;
+    dct:title "Google Scholar search results" ;
+    dcat:accessURL <https://scholar.google.com/scholar?q=10.5067%2F5NSX14QW4U4J> ;
+    dcat:mediaType "text/html" .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/ccb84be3-0c80-4bb9-b6a1-a23a8a13d816> a dcat:Distribution ;
+    dct:description "Provides access to data, documentation, tools, citation information, support, and other resources." ;
+    dct:format "HTML" ;
+    dct:title "This dataset's landing page" ;
+    dcat:accessURL <https://doi.org/10.5067/5NSX14QW4U4J> ;
+    dcat:mediaType "text/html" .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/d309834b-9ebf-4dcf-82a9-2f4bbc570053> a dcat:Distribution ;
+    dct:description "Tool to visualize, search, and download IceBridge data." ;
+    dct:format "HTML" ;
+    dct:title "Download this dataset" ;
+    dcat:accessURL <https://nsidc.org/icebridge/portal/> ;
+    dcat:mediaType "text/html" .
+
+<https://catalog.data.gov/dataset/1dcf9314-c08d-4185-a7f9-092928c38831/resource/e3faac25-1762-424f-ab50-9d53365dfe72> a dcat:Distribution ;
+    dct:description "NASA's newest search and order tool for subsetting, reprojecting, and reformatting data." ;
+    dct:format "HTML" ;
+    dct:title "Download this dataset through Earthdata Search" ;
+    dcat:accessURL <https://search.earthdata.nasa.gov/search/granules?p=C1586132466-NSIDC_ECS&m=-63.5625%21-85.78125%211%211%210%210%2C2&q=IRTIT3&ok=IRTIT3> ;
+    dcat:mediaType "text/html" .
+
+<https://catalog.data.gov/organization/f4ca4614-8901-409b-8553-2e994ad10023> a foaf:Organization ;
+    foaf:name "National Aeronautics and Space Administration" .
+

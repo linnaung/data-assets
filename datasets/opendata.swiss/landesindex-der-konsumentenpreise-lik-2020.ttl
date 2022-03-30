@@ -1,0 +1,131 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xml1: <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ckan.opendata.swiss/perma/11667505@bundesamt-fur-statistik-bfs> a dcat:Dataset ;
+    dct:identifier "11667505@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "de",
+        "fr",
+        "it" ;
+    dct:modified "2021-10-07T04:26:35.973965"^^xsd:dateTime ;
+    dct:publisher [ a rdf:Description ;
+            rdfs:label "BFS/OFS" ] ;
+    dct:relation <https://www.admin.ch/opc/de/classified-compilation/19920252/index.html> ;
+    dct:spatial "Schweiz" ;
+    dct:temporal [ a dct:PeriodOfTime ;
+            schema:endDate "2020-12-31T00:00:00"^^xsd:dateTime ;
+            schema:startDate "2020-01-01T00:00:00"^^xsd:dateTime ] ;
+    dct:title "Landesindex der Konsumentenpreise (LIK) - 2020"@de,
+        "L'indice suisse des prix à la consommation (IPC) - 2020"@fr,
+        "Indice nazionale dei prezzi al consumo (IPC) - 2020"@it ;
+    rdfs:seeAlso "15944760@bundesamt-fur-statistik-bfs" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "info@bfs.admin.ch" ;
+            vcard:hasEmail <mailto:auskunftsdienst@bfs.admin.ch> ] ;
+    dcat:distribution <https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/6974d7e6-8857-4711-a00c-66eac5fdb062>,
+        <https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/a0f710f8-0b69-4c4f-ac54-b4de0b92bd58>,
+        <https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/cb1f8ad5-8db3-4beb-8318-9900f4a52893>,
+        <https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/ccd3dcb7-856d-494a-84fd-540cd860fadb>,
+        <https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/cdfd9188-f65f-49f5-bb63-11eb611c266a>,
+        <https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/e6977c50-a492-4319-82c9-ebae7dd71e35> ;
+    dcat:keyword "landesindex-der-konsumentenpreise"@de,
+        "preise"@de,
+        "publikation"@de,
+        "stichprobenerhebung"@de,
+        "consumer-price-index"@en,
+        "prices"@en,
+        "publication"@en,
+        "sample-surveys"@en,
+        "enquete--par-sondage"@fr,
+        "indice-suisse-des-prix-a-la-consommation"@fr,
+        "prix"@fr,
+        "publication"@fr,
+        "indice-nazionale-dei-prezzi-al-consumo"@it,
+        "prezzi"@it,
+        "pubblicazione"@it,
+        "rilevazione-campionaria"@it ;
+    dcat:landingPage "https://www.bfs.admin.ch/asset/de/527-2000" ;
+    dcat:theme <http://opendata.swiss/themes/prices> .
+
+<https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/6974d7e6-8857-4711-a00c-66eac5fdb062> a dcat:Distribution ;
+    dct:format "PDF" ;
+    dct:identifier "11667506-master@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "de" ;
+    dct:modified "2020-02-04T00:00:00"^^xsd:dateTime ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Landesindex der Konsumentenpreise (LIK) - 2020"@de ;
+    dcat:accessURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/11667506/master> ;
+    dcat:downloadURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/11667506/master> ;
+    dcat:mediaType "application/pdf" .
+
+<https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/a0f710f8-0b69-4c4f-ac54-b4de0b92bd58> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:identifier "11667508-it@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "it" ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Indice nazionale dei prezzi al consumo (IPC) - 2020"@it ;
+    dcat:accessURL <https://www.bfs.admin.ch/asset/it/529-2000> ;
+    dcat:mediaType "text/html" .
+
+<https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/cb1f8ad5-8db3-4beb-8318-9900f4a52893> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:identifier "11667507-fr@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "fr" ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "L'indice suisse des prix à la consommation (IPC) - 2020"@fr ;
+    dcat:accessURL <https://www.bfs.admin.ch/asset/fr/528-2000> ;
+    dcat:mediaType "text/html" .
+
+<https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/ccd3dcb7-856d-494a-84fd-540cd860fadb> a dcat:Distribution ;
+    dct:format "PDF" ;
+    dct:identifier "11667507-master@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "fr" ;
+    dct:modified "2020-02-04T00:00:00"^^xsd:dateTime ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "L'indice suisse des prix à la consommation (IPC) - 2020"@fr ;
+    dcat:accessURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/11667507/master> ;
+    dcat:downloadURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/11667507/master> ;
+    dcat:mediaType "application/pdf" .
+
+<https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/cdfd9188-f65f-49f5-bb63-11eb611c266a> a dcat:Distribution ;
+    dct:format "PDF" ;
+    dct:identifier "11667508-master@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "it" ;
+    dct:modified "2020-02-04T00:00:00"^^xsd:dateTime ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Indice nazionale dei prezzi al consumo (IPC) - 2020"@it ;
+    dcat:accessURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/11667508/master> ;
+    dcat:downloadURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/11667508/master> ;
+    dcat:mediaType "application/pdf" .
+
+<https://ckan.opendata.swiss/dataset/1cceddbe-2c9f-471b-b81f-c6286b150181/resource/e6977c50-a492-4319-82c9-ebae7dd71e35> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:identifier "11667506-de@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2020-02-10T00:00:00"^^xsd:dateTime ;
+    dct:language "de" ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Landesindex der Konsumentenpreise (LIK) - 2020"@de ;
+    dcat:accessURL <https://www.bfs.admin.ch/asset/de/527-2000> ;
+    dcat:mediaType "text/html" .
+
+<https://www.admin.ch/opc/de/classified-compilation/19920252/index.html> rdfs:label "legal_basis" .
+

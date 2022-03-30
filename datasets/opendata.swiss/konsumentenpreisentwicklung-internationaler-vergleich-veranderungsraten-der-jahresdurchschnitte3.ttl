@@ -1,0 +1,100 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xml1: <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ckan.opendata.swiss/perma/15704881@bundesamt-fur-statistik-bfs> a dcat:Dataset ;
+    dct:identifier "15704881@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:language "de",
+        "fr" ;
+    dct:modified "2021-10-07T04:02:31.598683"^^xsd:dateTime ;
+    dct:publisher [ a rdf:Description ;
+            rdfs:label "BFS/OFS" ] ;
+    dct:relation <https://www.admin.ch/opc/de/classified-compilation/19920252/index.html> ;
+    dct:temporal [ a dct:PeriodOfTime ;
+            schema:endDate "2020-12-31T00:00:00"^^xsd:dateTime ;
+            schema:startDate "1990-01-01T00:00:00"^^xsd:dateTime ] ;
+    dct:title "Konsumentenpreisentwicklung, internationaler Vergleich. Veränderungsraten der Jahresdurchschnitte"@de,
+        "Evolution des prix à la consommation, comparaison internationale. Taux de variation des moyennes annuelles"@fr ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "info@bfs.admin.ch" ;
+            vcard:hasEmail <mailto:auskunftsdienst@bfs.admin.ch> ] ;
+    dcat:distribution <https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/1430cedf-749f-4e1a-b700-1f31e3191434>,
+        <https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/4e91607f-fe6f-43e6-9f1c-356ff9238cc3>,
+        <https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/649ee344-f3e1-458c-8a90-a57630fbd880>,
+        <https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/ffd9ab59-b8ad-4ccd-84be-a418c02315ed> ;
+    dcat:keyword "nachhaltige-entwicklung-regionale-und-internationale-disparitaten"@de,
+        "preise"@de,
+        "tabelle"@de,
+        "prices"@en,
+        "sustainable-development-regional-and-international-disparities"@en,
+        "table"@en,
+        "developpement-durable-disparites-regionales-et-internationales"@fr,
+        "prix"@fr,
+        "tableau"@fr,
+        "prezzi"@it,
+        "sviluppo-sostenibile-e-disparita-regionali-e-internazionali"@it,
+        "tabella"@it ;
+    dcat:landingPage "https://www.bfs.admin.ch/asset/de/je-d-05.01.02" ;
+    dcat:theme <http://opendata.swiss/themes/population>,
+        <http://opendata.swiss/themes/prices> .
+
+<https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/1430cedf-749f-4e1a-b700-1f31e3191434> a dcat:Distribution ;
+    dct:format "XLS" ;
+    dct:identifier "15704882-master@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:language "de" ;
+    dct:modified "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Konsumentenpreisentwicklung, internationaler Vergleich. Veränderungsraten der Jahresdurchschnitte"@de ;
+    dcat:accessURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/15704882/master> ;
+    dcat:downloadURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/15704882/master> ;
+    dcat:mediaType "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/4e91607f-fe6f-43e6-9f1c-356ff9238cc3> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:identifier "15704883-fr@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:language "fr" ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Evolution des prix à la consommation, comparaison internationale. Taux de variation des moyennes annuelles"@fr ;
+    dcat:accessURL <https://www.bfs.admin.ch/asset/fr/je-f-05.01.02> ;
+    dcat:mediaType "text/html" .
+
+<https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/649ee344-f3e1-458c-8a90-a57630fbd880> a dcat:Distribution ;
+    dct:format "XLS" ;
+    dct:identifier "15704883-master@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:language "fr" ;
+    dct:modified "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Evolution des prix à la consommation, comparaison internationale. Taux de variation des moyennes annuelles"@fr ;
+    dcat:accessURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/15704883/master> ;
+    dcat:downloadURL <https://www.bfs.admin.ch/bfsstatic/dam/assets/15704883/master> ;
+    dcat:mediaType "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://ckan.opendata.swiss/dataset/1bd88c1c-502e-4c97-8809-ffcb8c471e07/resource/ffd9ab59-b8ad-4ccd-84be-a418c02315ed> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:identifier "15704882-de@bundesamt-fur-statistik-bfs" ;
+    dct:issued "2021-01-25T00:00:00"^^xsd:dateTime ;
+    dct:language "de" ;
+    dct:rights "NonCommercialAllowed-CommercialWithPermission-ReferenceRequired" ;
+    dct:title "Konsumentenpreisentwicklung, internationaler Vergleich. Veränderungsraten der Jahresdurchschnitte"@de ;
+    dcat:accessURL <https://www.bfs.admin.ch/asset/de/je-d-05.01.02> ;
+    dcat:mediaType "text/html" .
+
+<https://www.admin.ch/opc/de/classified-compilation/19920252/index.html> rdfs:label "legal_basis" .
+

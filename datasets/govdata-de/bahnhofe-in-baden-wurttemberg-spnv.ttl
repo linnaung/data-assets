@@ -1,0 +1,74 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://gdk.gdi-de.org/inspire/srv/eng/xml_iso19139?uuid=72dccca2-fdcc-4e50-82a7-acfc02a59abe> a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/gdiDE> ;
+    dct:description "Haltestellen des Schienenpersonennahverkehr der NVBW - Nahverkehrsgesellschaft Baden-Württemberg mbH. Die Daten enthalten die offizielle, eindeutige Deutsche Haltestellen-ID (DHID)." ;
+    dct:identifier "72dccca2-fdcc-4e50-82a7-acfc02a59abe" ;
+    dct:issued "2020-09-23T16:00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+    dct:modified "2020-11-19T15:23:22"^^xsd:dateTime ;
+    dct:publisher <https://ckan.govdata.de/organization/8253c8aa-d80e-4bbb-9d29-b543507f9776> ;
+    dct:spatial [ a dct:Location ;
+            locn:geometry "POLYGON ((7.2000 50.0000, 10.7000 50.0000, 10.7000 47.4000, 7.2000 47.4000, 7.2000 50.0000))"^^gsp:wktLiteral,
+                "{\"type\": \"Polygon\", \"coordinates\": [[[7.2, 50.0], [10.7, 50.0], [10.7, 47.4], [7.2, 47.4], [7.2, 50.0]]]}"^^<https://www.iana.org/assignments/media-types/application/vnd.geo+json> ] ;
+    dct:title "Bahnhöfe in Baden-Württemberg (SPNV)" ;
+    dct:type "http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset" ;
+    adms:identifier "72dccca2-fdcc-4e50-82a7-acfc02a59abe" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "NVBW - Nahverkehrsgesellschaft Baden-Württemberg" ;
+            vcard:hasCountryName "Deutschland" ;
+            vcard:hasEmail <mailto:mobidata-bw@nvbw.de> ;
+            vcard:hasLocality "Stuttgart" ;
+            vcard:hasPostalCode "70182" ;
+            vcard:hasStreetAddress "Wilhelmsplatz 11" ;
+            vcard:hasTelephone <tel:+4971123991-0> ;
+            vcard:hasURL <https://www.mobidata-bw.de> ] ;
+    dcat:distribution <https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/SPNV_BW_Haltestellen.gml#distribution> ;
+    dcat:keyword "baden-württemberg",
+        "bahn",
+        "bahnhalte",
+        "bahnhof",
+        "deutsche-haltestellen-id",
+        "dhid",
+        "eisenbahn",
+        "haltestelle",
+        "haltestellen",
+        "haltestellen-id",
+        "inspireidentifiziert",
+        "nvbw",
+        "opendata",
+        "schienenpersonennahverkehr",
+        "spnv",
+        "verkehrsnetze" ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN> .
+
+<https://ckan.govdata.de/organization/8253c8aa-d80e-4bbb-9d29-b543507f9776> a foaf:Organization ;
+    foaf:homepage <https://www.mobidata-bw.de> ;
+    foaf:mbox "mailto:mobidata-bw@nvbw.de" ;
+    foaf:name "NVBW - Nahverkehrsgesellschaft Baden-Württemberg" .
+
+<https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/SPNV_BW_Haltestellen.gml#distribution> a dcat:Distribution ;
+    dcatde:licenseAttributionByText "Quelle: Datensatz der NVBW GmbH" ;
+    dct:description "SPNV_BW_Haltestellen" ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/GML> ;
+    dct:license <http://dcat-ap.de/def/licenses/other-open> ;
+    dct:title "SPNV_BW_Haltestellen" ;
+    dcat:accessURL <https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/SPNV_BW_Haltestellen.gml> ;
+    dcat:downloadURL <https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/SPNV_BW_Haltestellen.gml> .
+

@@ -1,0 +1,73 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.csv#dataset> a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/genesisDestatis> ;
+    dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/federal> ;
+    dct:description "Erntemenge an Weinmost: Deutschland, Jahre, AusgewählteRebsorten, Weinanbaugebiete" ;
+    dct:identifier "https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00" ;
+    dct:issued "2018-05-14T00:00:00"^^xsd:dateTime ;
+    dct:modified "2018-05-14T00:00:00"^^xsd:dateTime ;
+    dct:publisher <https://ckan.govdata.de/organization/a9c59aac-5fc1-47d2-a94e-b1070e8a5fc8> ;
+    dct:title "Erntemenge an Weinmost: Deutschland, Jahre, AusgewählteRebsorten, Weinanbaugebiete" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Statistisches Bundesamt" ;
+            vcard:hasEmail <mailto:https://www.destatis.de/kontakt> ] ;
+    dcat:distribution <https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.csv#distribution>,
+        <https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.xml#distribution> ;
+    dcat:keyword "ahr",
+        "ausgewählte-rebsorten",
+        "baden",
+        "blauer-spätburgunder",
+        "deutschland",
+        "deutschland-insgesamt",
+        "erhebung-der-weinernte",
+        "erntemenge-an-weinmost",
+        "franken",
+        "hessische-bergstraße",
+        "jahr",
+        "mittelrhein",
+        "mosel",
+        "nahe",
+        "pfalz",
+        "rheingau",
+        "rheinhessen",
+        "saale-unstrut",
+        "sachsen",
+        "weinanbaugebiete",
+        "weißer-riesling",
+        "württemberg" ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> .
+
+<https://ckan.govdata.de/organization/a9c59aac-5fc1-47d2-a94e-b1070e8a5fc8> a foaf:Organization ;
+    foaf:name "Statistisches Bundesamt" .
+
+<https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.csv#distribution> a dcat:Distribution ;
+    dct:description "Erntemenge an Weinmost: Deutschland, Jahre, AusgewählteRebsorten, Weinanbaugebiete" ;
+    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+    dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+    dcat:accessURL <https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.csv> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/csv> .
+
+<https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.xml#distribution> a dcat:Distribution ;
+    dct:description "Erntemenge an Weinmost: Deutschland, Jahre, AusgewählteRebsorten, Weinanbaugebiete" ;
+    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+    dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+    dcat:accessURL <https://www-genesis.destatis.de/genesis/downloads/00/tables/41253-0004_00.xml> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/xml> .
+
