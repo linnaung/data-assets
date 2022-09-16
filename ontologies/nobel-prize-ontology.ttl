@@ -191,7 +191,7 @@ nobel-ext:PrizeFileShape a sh:NodeShape;
 
 nobel-ext:Test a owl:Class;
   rdfs:isDefinedBy <http://data.nobelprize.org/terms/>;
-  rdfs:label "Testing Testing appended" .
+  rdfs:label "Testing Testing appended ha" .
 
 <http://data.nobelprize.org/terms/> a owl:Ontology;
   dcterms:contributor "Jeen Broekstra <jb@metaphacts.com>", "Johannes Trame <jt@metaphacts.com>";
