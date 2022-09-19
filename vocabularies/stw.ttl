@@ -20,7 +20,7 @@
   dcterms:contributor "Dave Beckett", "Nikki Rogers", "Participants in W3C's Semantic Web Deployment Working Group.";
   dcterms:creator "Alistair Miles", "Sean Bechhofer";
   dcterms:description "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies."@en;
-  dcterms:title "SKOS Vocabulary"@en;
+  dcterms:title " SKOS Vocabulary"@en;
   rdfs:seeAlso <http://www.w3.org/TR/skos-reference/> .
 
 skos:Collection a owl:Class;
