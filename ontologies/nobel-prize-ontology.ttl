@@ -18,7 +18,7 @@ nobel-ext:AwardFileShape a sh:NodeShape;
       sh:path nobel:fileType
     ], [ a sh:PropertyShape;
       sh:datatype xsd:integer;
-      sh:maxCount 1;
+      sh:maxCount 2;
       sh:minCount 1;
       sh:path nobel:year
     ];
