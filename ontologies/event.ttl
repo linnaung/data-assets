@@ -9,7 +9,7 @@
 :eventontology a owl:Ontology;
   dcterms:title "EventOntology";
   <http://www.linkedmodel.org/1.2/schema/vaem#namespace> <http://ontologies.metaphacts.com/eventontology/>;
-  rdfs:label "EventOntology" .
+  rdfs:label "EventOntology Test" .
 
 <http://ontologies.metaphacts.com/eventontology/Drink> a owl:Class;
   rdfs:isDefinedBy :eventontology;
