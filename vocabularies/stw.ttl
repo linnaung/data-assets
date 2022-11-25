@@ -486,12 +486,16 @@ zbwext:wdIdentifier a owl:InverseFunctionalProperty;
   void:vocabulary <http://creativecommons.org/ns#>, <http://purl.org/dc/terms/>, <http://purl.org/ontology/gbv/>,
     <http://www.w3.org/2004/02/skos/core#>, <http://zbw.eu/namespaces/zbw-extensions/>;
   owl:versionInfo "9.12";
-  skos:hasTopConcept <http://zbw.eu/stw/thsys/a>, <http://zbw.eu/stw/thsys/b>, <http://zbw.eu/stw/thsys/g>,
-    <http://zbw.eu/stw/thsys/n>, <http://zbw.eu/stw/thsys/p>, <http://zbw.eu/stw/thsys/v>,
-    <http://zbw.eu/stw/thsys/w>;
+  skos:hasTopConcept stw:92f430c8-402d-4591-a2af-b453feee3528, <http://zbw.eu/stw/thsys/a>,
+    <http://zbw.eu/stw/thsys/b>, <http://zbw.eu/stw/thsys/g>, <http://zbw.eu/stw/thsys/n>,
+    <http://zbw.eu/stw/thsys/p>, <http://zbw.eu/stw/thsys/v>, <http://zbw.eu/stw/thsys/w>;
   skos:prefLabel "Standard-Thesaurus Wirtschaft"@de, "STW Thesaurus for Economics"@en;
   foaf:homepage :stw;
   foaf:page <http://zbw.eu/stw/versions/latest/download> .
+
+stw:92f430c8-402d-4591-a2af-b453feee3528 a skos:Concept;
+  skos:inScheme :stw;
+  skos:prefLabel "Term-1"@en .
 
 <http://zbw.eu/stw/descriptor/10000-1> a skos:Concept, zbwext:Descriptor;
   gbv:gvkppn "091346932";
@@ -13294,10 +13298,10 @@ zbwext:wdIdentifier a owl:InverseFunctionalProperty;
     <http://zbw.eu/stw/descriptor/28202-6>;
   skos:scopeNote "Rechte und Pflichten im Rahmen einer Organisation."@de, "Rights and obligations concerning an organizational context."@en;
   zbwext:useInsteadNote [
-      rdf:value "For occupational skills and competencies"@en;
+      rdf:value "Für fachliche Kompetenzen"@de;
       rdfs:seeAlso <http://zbw.eu/stw/descriptor/19112-1>
     ], [
-      rdf:value "Für fachliche Kompetenzen"@de;
+      rdf:value "For occupational skills and competencies"@en;
       rdfs:seeAlso <http://zbw.eu/stw/descriptor/19112-1>
     ] .
 
