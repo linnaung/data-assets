@@ -14,7 +14,7 @@
 <http://ontologies.metaphacts.com/quick-test> a owl:Ontology;
   dcterms:title "Quick Test";
   vaem:namespace <http://ontologies.metaphacts.com/quick-test/>;
-  rdfs:label "Quick Test" .
+  rdfs:label "Quick Test appended" .
 
 :Class1 a owl:Class;
   rdfs:isDefinedBy <http://ontologies.metaphacts.com/quick-test>;
