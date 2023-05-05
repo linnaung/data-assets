@@ -17,6 +17,7 @@
   rdfs:label "Quick Test appended" .
 
 :Class1 a owl:Class;
+  rdfs:comment "test"@en;
   rdfs:isDefinedBy <http://ontologies.metaphacts.com/quick-test>;
   rdfs:label "Class-1" .
 
