@@ -2,7 +2,7 @@
 
 <http://id.loc.gov/vocabulary/geographicAreas>
     a <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "MARC List for Geographic Areas"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "MARC List for Geographic Areass"@en ;
     <http://www.w3.org/2004/02/skos/core#changeNote> [
         <http://purl.org/vocab/changeset/schema#changeReason> "modified" ;
         <http://purl.org/vocab/changeset/schema#createdDate> "2011-04-26T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
