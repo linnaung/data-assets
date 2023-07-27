@@ -1,7 +1,7 @@
 <http://id.loc.gov/vocabulary/countries/MARC_Country> <http://www.w3.org/2000/01/rdf-schema#label> "MARC Country"@en .
 <http://id.loc.gov/vocabulary/countries/ajr> <http://www.w3.org/2004/02/skos/core#hiddenLabel> "Azerbaijan S.S.R."@en .
 <http://id.loc.gov/vocabulary/countries/ajr> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/countries/aj> .
-<http://id.loc.gov/vocabulary/countries/ajr> <http://www.w3.org/2004/02/skos/core#notation> "ajrr" .
+<http://id.loc.gov/vocabulary/countries/ajr> <http://www.w3.org/2004/02/skos/core#notation> "ajrrrr" .
 <http://id.loc.gov/vocabulary/countries/ajr> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode2503656929938462470 .
 _:bnode2503656929938462470 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
 _:bnode2503656929938462470 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/countries/ajr> .
